@@ -1,9 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import User from './User';
+import Clock from './Clock';
 
+
+function formatName(name) {
+  return name.firstName + ' ' + name.lastName;
+}
+const zz = {
+  firstName: 'zz', 
+  lastName: 'thian'
+};
 function App() {
   return (
     <div className="App">
+      <User userName = {formatName(zz)} appVer = '1'/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -15,9 +26,10 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn React 
         </a>
       </header>
+      <Clock/>
     </div>
   );
 }
